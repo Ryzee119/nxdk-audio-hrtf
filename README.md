@@ -7,9 +7,8 @@ The original Xbox APU features a hardware HRTF (Head-Related Transfer Function) 
 - **31-tap FIR Filter:** The hardware can only process 31 samples per ear.
 - **8-bit Signed Integers:** Coefficients must be quantized to `-127` to `127`.
 - **ITD Extraction:** The Interaural Time Delay must be separated from the filter and passed to the hardware as a separate delay value.
-- **Specific Grid:** The lookup table must map to a specific 37x14 Azimuth/Elevation grid.
 
-This script parses high-resolution floating-point `.sofa` files, performs the necessary digital signal processing (DSP) to meet the hardware's strict limitations, and outputs a ready-to-compile `nxaudio_hrtf.h` C header.
+This script parses high-resolution floating-point `.sofa` files, performs the necessary processing to meet the hardware's strict limitations, and outputs a ready-to-compile `hrtf.h` C-style header.
 
 ## Requirements
 * Python 3.x
